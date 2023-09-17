@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="responsive web,html5">
+  <meta name="description" content="BlueBottle responsive website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <!--[if IE]>
+  <meta http-equiv= "X-UA-Compatible" content="IE=edge">
+  <![endif]-->
+  <title>Famila</title>
+  <link href="img/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/work.css" type="text/css">
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+  </script>
+  <![endif]-->
+  <script src="js/prefixfree.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+  <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+  </script>
+</head>
+<body>
+    
+  <!--wrap start-->
+  <div class="wrap clearfix">
+    <header>
+      <div class="headerInner">
+        <div class="navWrap"><!--navWrap start-->
+          <h1><a href="index.html"><img src="img/logo.png" alt="Famila"></a></h1>
+          <button type="button" class="nav_btn mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav><!--nav start-->
+            <div class="navInner clearfix">
+              <ul>
+                <li><a href="#">생활도움 서비스</a></li>
+                <li><a href="#">모임찾기</a></li>
+                <li><a href="#">도우미등록</a></li> 
+              </ul>
+            </div>
+            <button type="button" class="nav_close mobile"></button>
+          </nav><!--nav finish-->
+        </div><!--navWrap finish-->
+  
+        <div class="visual pc">
+          <div class="visualInner">
+            <h2>안녕! 우리는 패밀라 입니다.</h2>
+            <p>우리는 시니어에게 동반자 관계로서 긴밀한 1:1 생활도우미 서비스를 드리고 다양한 취미기반 모임을 연결해줍니다.</p>
+            <a href="#">SIGN UP</a>
+          </div>
+          <div class="visualInnerRight">
+            <a><img src="img/headerBgRight.png"></a>
+          </div>
+        </div><!--visual finish-->
+
+      </div><!--headerInner finish-->
+    </header>
+    
+    
+  
+
+    <div class="div_main">
+      <div class="section01">
+        <div class="section01Text">
+          <h2>동반자와 즐겁게!</h2>
+          <p>패밀라는 가족이 되어주고 시니어들이 서로 연결되도록 돕고 시니어들의 취미기반 모임 및 수업을 운영하여 지역 사회를 지원하고 모두에게 상생 혜택을 제공합니다.</p>
+        </div><!--왼쪽 텍스트-->
+        <div class="section02Image">
+          <div class="item01">
+            <a><img src="img/section01Help.png"></a>
+            <a><img src="img/section01Active.png"></a>
+          </div>
+          <div class="item02">
+            <div class="item02Left">
+              <a><img src="img/help01.png"></a>
+              <h3>생활도우미 매칭</h3>
+              <p>패밀라와 함께라면 전화나 클릭만으로 함께 할 수 있습니다. 1:1 도우미 매칭을 통해 꾸준한 케어를 받습니다.</p>
+            </div>
+            <div class="item02Right">
+              <a><img src="img/active01.png"></a>
+              <h3>수익 증대</h3>
+              <p>취미기반 모임과 수업을 직접 열어서 수익을 얻어 갈 수 있습니다. 누구나 모임을 만들고 참여할 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="item03">
+            <div class="item03Left">
+              <a><img src="img/help02.png"></a>
+              <h3>불편함 해소</h3>
+              <p>장기요양 등급을 받지 못했거나 받았음에도 생활도움이 필요한 시니어들 에게 생활 도움을 제공합니다.</p>
+            </div>
+            <div class="item03Right">
+              <a><img src="img/active02.png"></a>
+              <h3>외로움을 치료하다</h3>
+              <p>노년에도 활동하고 배우고 사람과의 연결을 통해 사회적 문제인 고독사를 이겨냅니다.</p>
+            </div>
+          </div>
+        </div>
+      </div><!--section01 finish-->
+
+      <div class="videoWrap">
+        <h3>비디오</h3>
+      </div>
+
+
+
+
+
+
+
+    </div><!--div main finish-->
+      
+      
+      
+    
+    
+
+
+  </div>
+  <!--wrap finish-->  
+    
+    
+
+
+
+
+
+
+   
+    <script>
+     $(function(){
+       var slideAni=1;
+       $('.nav_btn').click(function(){
+         if(slideAni==1){
+           $('.navInner').animate({right:'0px;'},300,'easeOutBack');
+           $('nav').show();
+           slideAni=1;
+         }//if
+       });//click
+     });//
+      
+      
+    $(function(){
+       var slideAni=1;
+       $('.nav_close').click(function(){
+         if(slideAni==1){
+           $('.navInner').animate({right:'-300px;'},300,'easeOutBack');
+           $('nav').hide();
+           slideAni=1;
+         }//if
+       });//click
+     });//
+    </script>
+    
+
+
+
+
+
+
+
+
+ </body>
+</html>
