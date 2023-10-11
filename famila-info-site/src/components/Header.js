@@ -39,7 +39,7 @@ const HeaderStyled = styled.div`
     font-size: 20px;
     margin-top: 80vw;
     width: 100vw;
-    height: 150vh;
+    height: 200vh;
     background-color: white;
     > div {
       margin: 30px auto;

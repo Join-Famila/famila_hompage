@@ -22,7 +22,7 @@ const MainStyled = styled.div`
   .info {
     width: 371px;
     height: 234px;
-    margin-top: 15vh;
+    margin-top: 7%;
     margin-left: 10vw;
     > h1,
     h4 {
@@ -43,6 +43,7 @@ const MainStyled = styled.div`
   .download-store {
     display: flex;
     margin-left: 10vw;
+    margin-top: 3%;
     user-select: all;
   }
   .download-store > img {
@@ -93,12 +94,8 @@ const MainStyled = styled.div`
     }
   }
   @media only screen and (max-width: 600px) {
-    // .Main {
-    //   height: 95vh;
-    // }
     .info {
       width: 325px;
-      margin-top: 10vh;
     }
     .main-info {
       font-size: 54px;
@@ -123,9 +120,6 @@ const MainStyled = styled.div`
     }
   }
   @media only screen and (max-width: 400px) {
-    // .Main {
-    //   height: 80vh;
-    // }
     .info {
       width: 250px;
       height: auto;

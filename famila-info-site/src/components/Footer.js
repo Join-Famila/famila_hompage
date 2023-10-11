@@ -35,6 +35,7 @@ const FooterStyled = styled.div`
     }
     .footer-menu {
       min-width: 40%;
+      margin-left: 10px;
       .menu-title {
         color: #ec616f;
         font-size: 18px;
@@ -68,6 +69,9 @@ const FooterStyled = styled.div`
         width: 100%;
         margin-right: 0;
       }
+    }
+    .other-link {
+      justify-content: flex-start;
     }
   }
   @media only screen and (max-width: 430px) {

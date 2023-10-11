@@ -7,6 +7,7 @@ const Section3Styled = styled.div`
   display: flex;
   justify-content: center;
   .Section3 {
+    width: 100vw;
     height: 100%;
   }
   hr {
@@ -34,8 +35,7 @@ const Section3Styled = styled.div`
       width: 320px;
       border: 1px solid lightgray;
       border-radius: 20px;
-      padding-left: 30px;
-      padding-top: 30px;
+      padding: 30px;
       padding-bottom: 10px;
       h3 {
         color: #bbb;
@@ -49,25 +49,25 @@ const Section3Styled = styled.div`
     }
   }
   .user-case-div {
-    height: 685px;
+    width: 100%;
     background-color: #f7f8f9;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     .case-imgs {
-      position: relative;
+      margin-top: 150px;
+      margin-bottom: 30px;
       .case-img1 {
-        position: absolute;
-        top: -200px;
-        left: -130px;
+        position: relative;
+        left: 40px;
       }
       .case-img2 {
         width: 377px;
         height: 286px;
-        position: absolute;
-        top: -270px;
-        left: 200px;
+        position: relative;
+        top: -70px;
+        right: 40px;
       }
       .slide-case-img {
         width: 378px;
@@ -77,15 +77,17 @@ const Section3Styled = styled.div`
     }
     .button-div {
       display: flex;
-      
+      width: 70%;
+      height: 0;
+      justify-content: space-between;
       .left-button {
-        position: absolute;
-        left: 9vw;
+        position: relative;
+        top: -100px;
         cursor: pointer;
       }
       .right-button {
-        position: absolute;
-        right: 9vw;
+        position: relative;
+        top: -100px;
         cursor: pointer;
       }
     }
@@ -104,7 +106,7 @@ const Section3Styled = styled.div`
     }
   }
   .promotion-div {
-    width: 75%;
+    max-width: 75%;
     margin: 150px auto;
     background-color: #ec616f;
     border-radius: 20px;
@@ -112,7 +114,7 @@ const Section3Styled = styled.div`
     word-break: keep-all;
     position: relative;
     user-select: none;
-    overflow:hidden;
+    overflow: hidden;
     h1,
     h3 {
       color: white;
@@ -131,83 +133,66 @@ const Section3Styled = styled.div`
         cursor: pointer;
       }
     }
-    .mobile-imgs {
-      position: relative;
-    }
-    .mobile1-img {
+    .Section3-background-heart {
       position: absolute;
-      right: 250px;
-      bottom: -47px;
+      left: 40%;
+      top: -20px;
+      object-fit: cover;
     }
-    .mobile2-img {
-      position: absolute;
-      right: 100px;
-      bottom: 10px;
-    }
-    .Section3-background-heart{
-      position: absolute;
-      left: 50%;
-      top:0;
-      object-fit:cover;
-    }
+  }
+  .mobile-imgs {
+    position: relative;
+    right: 150px;
+    bottom: 500px;
+  }
+  .mobile1-img {
+    position: absolute;
+    right: 250px;
+  }
+  .mobile2-img {
+    position: absolute;
+    top: -50px;
+    right: 100px;
   }
   @media only screen and (max-width: 1200px) {
     .management-systems-div {
       flex-wrap: wrap;
     }
-    .promotion-div {
-      .mobile1-img {
-        right: 100px;
-        bottom: -47px;
-      }
-      .mobile2-img {
-        right: -50px;
-        bottom: 10px;
-      }
+    .mobile-imgs {
+      right: 0;
     }
   }
   @media only screen and (max-width: 1000px) {
-    .promotion-div {
-      .mobile1-img, .mobile2-img {
-        display: none;
-      }
-    }
-    .user-case-div {
-      .case-imgs {
-        .case-img1 {
-          position: absolute;
-          top: -220px;
-          left: -50px;
-        }
-        .case-img2 {
-          width: 377px;
-          height: 286px;
-          position: absolute;
-          top: -270px;
-          left: 150px;
-        }
-      }
+    .mobile1-img,
+    .mobile2-img {
+      display: none;
     }
 
     @media only screen and (max-width: 800px) {
-      .user-case-div > .case-imgs {
-        .slide-case-img {
-          display: flex;
+      .user-case-div {
+        .case-imgs {
+          .slide-case-img {
+            display: flex;
+          }
+          .case-img1 {
+            display: none;
+          }
+          .case-img2 {
+            display: none;
+          }
         }
-        .case-img1 {
-          display: none;
-        }
-        .case-img2 {
-          display: none;
+        .button-div {
+          min-width: 80%;
+          .left-button,
+          .right-button {
+            top: -170px;
+          }
         }
       }
     }
     @media only screen and (max-width: 630px) {
-      
-      .button-div {
-        margin-bottom: 150px;
-      }
       .promotion-div {
+        margin: 100px auto;
         h3 {
           font-size: 22px;
         }
@@ -221,31 +206,38 @@ const Section3Styled = styled.div`
           }
         }
       }
+      .user-case-div {
+        .case-imgs {
+          margin-top: 50px;
+          .slide-case-img {
+            width: 286px;
+            height: 261px;
+          }
+        }
+        .case-info-div {
+          margin-bottom: 30px;
+        }
+      }
     }
     @media only screen and (max-width: 450px) {
-      .button-div {
-        margin-bottom: 200px;
-      }
       .user-case-div {
-        height: 615px;
         padding-bottom: 20px;
-        .case-imgs > .slide-case-img {
+        .slide-case-img {
           width: 278px;
           height: 300px;
         }
-        .case-info-div {
-          margin-top: 450px;
-          h3 {
-            margin: auto 20px;
+        .case-info-div h3 {
+          margin: auto 20px;
+        }
+        .button-div {
+          min-width: 90%;
+          .left-button,
+          .right-button {
+            top: -200px;
           }
         }
       }
     }
-    @media only screen and (max-width: 400px) {
-      .promotion-div {
-        margin-top: 100px;
-        margin-bottom: 80px;
-      }
   }
 `;
 
