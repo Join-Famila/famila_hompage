@@ -8,21 +8,11 @@ const HeaderStyled = styled.div`
   position: fixed;
   background-color: white;
   z-index: 100;
-  div {
-    display: flex;
-    justify-content: center;
-  }
-  .Header {
-    margin: 25px;
-  }
-  .logo-div {
-    position: absolute;
-    left: 10px;
-    cursor: pointer;
-  }
-  .toggle {
-    width: 16.8px;
-  }
+`;
+const HeaderBody = styled.div`
+  margin: 25px;
+  display: flex;
+  justify-content: space-between;
   .menubar {
     font-size: 18px;
     font-weight: bold;
@@ -41,79 +31,62 @@ const HeaderStyled = styled.div`
     width: 100vw;
     height: 200vh;
     background-color: white;
-    > div {
+    div {
       margin: 30px auto;
       min-width: 100px;
       cursor: pointer;
     }
   }
-  .toggle-div {
-    position: absolute;
-    right: 10px;
-  }
-  .toggle {
-    display: none;
-    font-size: 2rem;
-    padding: 1rem 1rem;
-    margin-top: 0.5rem;
-    color: gray;
-  }
-  @media only screen and (max-width: 900px) {
-    .menubar {
-      margin-left: 150px;
-    }
-  }
   @media only screen and (max-width: 750px) {
-    .Header {
-      margin: 0;
-      height: 90px;
-      align-items: center;
-    }
-    .toggle {
-      display: block;
-    }
-    .menubar {
-      display: none;
-    }
-  }
-  @media only screen and (max-width: 600px) {
-    .menubar-toggle {
-      margin-top: 100vw;
-    }
-  }
-  @media only screen and (max-width: 450px) {
-    .menubar-toggle {
-      margin-top: 120vw;
-    }
-  }
-  @media only screen and (max-width: 450px) {
-    .menubar-toggle {
-      margin-top: 120vw;
-    }
-  }
-  @media only screen and (max-width: 380px) {
-    .menubar-toggle {
-      margin-top: 150vw;
-    }
+    margin: 0;
+    height: 90px;
+    align-items: center;
   }
 `;
 
+const LogoDiv = styled.div`
+  
+  cursor: pointer;
+`;
+const Menubar = styled.div`
+  display: flex;
+  @media only screen and (max-width: 750px) {
+    display: none;
+    margin-left: auto;
+  }
+`;
+const Toggle = styled.div`
+  width: 16.8px;
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  margin-top: 0.5rem;
+  color: gray;
+  *{
+    display: none;
+    user-select: none;
+  }
+  @media only screen and (max-width: 750px) {
+  *{
+    display: block;
+    user-select: auto;
+  }
+`;
 const Header = () => {
   const [isToggled, setIsToggled] = useState(false);
   return (
     <HeaderStyled>
       {/* 상단 고정 메뉴바 헤더 */}
-      <div className="Header">
-        <div className="logo-div">
+      <HeaderBody>
+        <LogoDiv>
           {/* 좌측 상단 로고 이미지 */}
           <img
             // src="img/famila-logo.png"
             src={process.env.PUBLIC_URL + "/img/famila-logo.png"}
             alt="Famila-logo"
           />
-        </div>
+        </LogoDiv>
         {/* 상단 메뉴바 */}
-        <div className={`${!isToggled ? "menubar" : "menubar-toggle"}`}>
+        <Menubar className={`${!isToggled ? "menubar" : "menubar-toggle"}`}>
           {/* 생활 도움*/}
           <div className="life-support">생활 도움</div>
           {/* 모임 활동 */}
@@ -124,19 +97,14 @@ const Header = () => {
           <div className="supporter-registration">도우미 등록</div>
           {/* 기업/기관 */}
           <div className="corporation-institution">기업/기관</div>
-        </div>
-        <div className="toggle-div">
-          {/* 메뉴 토글 버튼(bar) */}
-          <div
-            className="toggle"
-            onClick={() => {
-              setIsToggled(!isToggled);
-            }}
-          >
-            <FontAwesomeIcon icon={!isToggled ? faBars : faTimes} />
-          </div>
-        </div>
-      </div>
+        </Menubar>
+        {/* 메뉴 토글 버튼(bar) */}
+        <Toggle>
+          <FontAwesomeIcon icon={!isToggled ? faBars : faTimes} onClick={() => {
+            setIsToggled(!isToggled);
+          }} />
+        </Toggle>
+      </HeaderBody>
     </HeaderStyled>
   );
 };
