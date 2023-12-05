@@ -47,8 +47,8 @@ const MainStyled = styled.div`
     user-select: all;
   }
   .download-store > img {
-    width: 179px;
-    height: 66.8px;
+    min-width: 20%;
+    // max-height: 66.8px;
     margin-top: 60px;
     margin-right: 30px;
     cursor: pointer;
